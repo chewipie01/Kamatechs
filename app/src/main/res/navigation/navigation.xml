@@ -20,4 +20,14 @@
         android:name="com.example.kamatechs.FAQ"
         android:label="fragment_faq"
         tools:layout="@layout/fragment_faq" />
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.kamatechs.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.kamatechs.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>
