@@ -28,8 +28,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="132dp"
+            android:fontFamily="@font/raleway_bold"
             android:text="LOGIN"
-            android:textAppearance="@style/TextAppearance.Kamatechs.Title"/>
+            android:textAppearance="@style/TextAppearance.Kamatechs.Title" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.Kamatechs.TextInputLayout"

@@ -23,6 +23,19 @@
     <style name="Widget.Kamatechs.Button" parent="Widget.MaterialComponents.Button">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="backgroundTint">?attr/colorPrimaryDark</item>
+
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/reg_button_state_list_anim
+        </item>
+    </style>
+
+    <style name="Widget.Kamatechs.Button1" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimaryDark</item>
+
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/login_button_stat_list_anim
+        </item>
     </style>
 
     <style name="Widget.Kamatechs.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
@@ -45,5 +58,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
+
+
 
 </resources>
