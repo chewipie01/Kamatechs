@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Kamatechs</string>
+    <string name="todo">TODO</string>
+    <string name="about">About</string>
+    <string name="the_kamatechs_help_farmers_predict_the_outside_environment_and_preserve_the_quality_of_post_harvest_tomatoes_using_a_deep_learning_based_prediction_system_for_storage_cooling_devices_through_the_following_technologies">The Kamatechs help farmers predict the outside environment and preserve the quality of post-harvest tomatoes using a deep learning-based prediction system for storage cooling devices through the following technologies:</string>
+    <string name="_1_predictive_analysis_algorithm">1. Predictive Analysis Algorithm</string>
+    <string name="_2_embedded_system">2. Embedded System</string>
+    <string name="_1_predictive_analysis_algorith">1. Predictive Analysis Algorithm</string>
+    <string name="_3_adaptive_cooling_storage">3. Adaptive Cooling Storage</string>
+    <string name="todoo">TODO</string>
+    <string name="faq">FAQ</string>
+    <string name="the_kamatechs_help_farmers_predict_the_environment_and_preserve_the_quality_of_post_harvest_tomato_using_a_deep_learning_based_prediction_system_for_storage_cooling_devices">The Kamatechs help farmers predict the environment and preserve the quality of Post Harvest Tomato using a deep learning-based Prediction System for Storage Cooling Devices.</string>
+    <string name="_2_what_is_the_goal_of_kamatechs">2. What is the goal of kamatechs?</string>
+    <string name="the_goal_of_kamatechs_is_to_help_tomato_farmers_preserve_the_quality_and_shelf_life_of_post_harvest_tomatoes">The goal of kamatechs is to help tomato farmers preserve the quality and shelf life of post harvest tomatoes.</string>
+    <string name="_3_what_is_the_reason_in_creating_kamatechs">3. What is the reason in creating kamatechs?</string>
+    <string name="climate_change_affects_the_storage_conditions_of_post_harvest_tomatoes_to_minimize_its_effect_a_deep_learning_based_prediction_system_for_storage_cooling_devices_was_created">Climate Change affects the storage conditions of Post Harvest Tomatoes. To minimize its effect, a deep learning-based Prediction System for Storage Cooling Devices was created.</string>
+    <string name="_1_what_is_kamatechs">1. What is Kamatechs?</string>
 </resources>
