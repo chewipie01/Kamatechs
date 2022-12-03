@@ -1,8 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.kamatechs.Home">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/welcome_to_kamatechs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="52dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/your_no_1_tomato_assistant"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <ImageView
+        android:id="@+id/imgTomato"
+        android:layout_width="252dp"
+        android:layout_height="275dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:srcCompat="@drawable/tomato"
+        android:contentDescription="@string/todoooo" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Kamatechs.Button"
+            android:id="@+id/btnLogin"
+            android:layout_width="191dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="110dp"
+            android:text="@string/login"
+            android:textColor="#6D4C41"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgTomato" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Kamatechs.Button"
+            android:id="@+id/btnReg"
+            android:layout_width="191dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="110dp"
+            android:text="@string/register"
+            android:textColor="#6D4C41"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
