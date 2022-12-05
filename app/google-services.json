@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "61982773076",
+    "project_id": "kamatechs-c5448",
+    "storage_bucket": "kamatechs-c5448.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61982773076:android:96d297830bf4934046c2c1",
+        "android_client_info": {
+          "package_name": "com.example.kamatechs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61982773076-74o0r4p4l56bnods5fa7l8dkr5bg77i5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBczO14lTHoGvEZvlOa-t7wcrR5ovthPY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61982773076-74o0r4p4l56bnods5fa7l8dkr5bg77i5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

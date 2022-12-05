@@ -27,15 +27,9 @@ class Home : Fragment() {
             view.findNavController().navigate(R.id.action_home2_to_register)
         }
 
-        setHasOptionsMenu(true)
+
         return binding.root
     }
-    override fun onCreateOptionsMenu(menu : Menu, inflater: MenuInflater){
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.options_menu, menu)
+
     }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean{
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-                || super.onOptionsItemSelected(item)
-    }
-}
+
