@@ -76,7 +76,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:text="Login" />
+                android:fontFamily="@font/raleway_bold"
+                android:text="Login"
+                android:textColor="#6D4C41" />
 
         </RelativeLayout>
     </LinearLayout>
