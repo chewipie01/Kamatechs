@@ -48,8 +48,9 @@
             app:destination="@id/weather" />
     </navigation>
     <activity
-        android:id="@+id/logout2"
-        android:name="com.example.kamatechs.Logout"
-        android:label="logout"
-        tools:layout="@layout/logout" />
+        android:id="@+id/insert"
+        android:name="com.example.kamatechs.Insert"
+        android:label="fragment_insert"
+        tools:layout="@layout/fragment_insert" />
+
 </navigation>
