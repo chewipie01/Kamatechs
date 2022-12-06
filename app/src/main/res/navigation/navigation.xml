@@ -47,4 +47,9 @@
             android:id="@+id/action_global_weather"
             app:destination="@id/weather" />
     </navigation>
+    <activity
+        android:id="@+id/logout2"
+        android:name="com.example.kamatechs.Logout"
+        android:label="logout"
+        tools:layout="@layout/logout" />
 </navigation>

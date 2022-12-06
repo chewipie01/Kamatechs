@@ -5,6 +5,7 @@
     tools:context=".Home">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/gradient_bg"
         android:id="@+id/homeConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

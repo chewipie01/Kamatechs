@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import com.example.kamatechs.WeatherResponse
-import com.example.kamatechs.WeatherService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,7 +17,7 @@ class Weather: AppCompatActivity() {
         setContentView(R.layout.activity_weather)
 
         weatherData = findViewById(R.id.textView)
-        findViewById<View> (R.id.data_button).setOnClickListener {
+        findViewById<View> (R.id.logout).setOnClickListener {
             getCurrentData()
         }
     }

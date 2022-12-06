@@ -26,4 +26,5 @@
     <string name="about1">About</string>
     <string name="faq1">FAQ</string>
     <string name="home">Home</string>
+    <string name="logout">LOGOUT</string>
 </resources>
