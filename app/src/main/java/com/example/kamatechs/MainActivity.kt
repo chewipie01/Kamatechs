@@ -21,42 +21,27 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var btnLog: Button
     private lateinit var btnRegi: Button
-//    private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
+    private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         drawerLayout = findViewById(R.id.drawerLayout)
+        actionBarDrawerToggle =
+            ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close)
 
-
-//        actionBarDrawerToggle =
-//            ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close)
-//
-//        drawerLayout.addDrawerListener(actionBarDrawerToggle)
-//        actionBarDrawerToggle.syncState()
-//        // to make the Navigation drawer icon always appear on the action bar
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        drawerLayout.addDrawerListener(actionBarDrawerToggle)
+        actionBarDrawerToggle.syncState()
+        // to make the Navigation drawer icon always appear on the action bar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val navView: NavigationView = findViewById(R.id.navView)
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
         NavigationUI.setupWithNavController(navView, navController)
 
-        btnLog = findViewById(R.id.btnLogin)
-        btnLog.setOnClickListener {
-            val intent = Intent(this, Login::class.java)
-            startActivity(intent)
-        }
-
-        btnRegi = findViewById(R.id.btnReg)
-        btnRegi.setOnClickListener {
-            val intent = Intent(this, Register::class.java)
-            startActivity(intent)
-        }
 
     }
 

@@ -3,54 +3,58 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/home2">
+    app:startDestination="@id/login">
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.kamatechs.login.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_register3"
+            app:destination="@id/register3" />
+        <action
+            android:id="@+id/action_login_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/register3"
+        android:name="com.example.kamatechs.register.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register3_to_login"
+            app:destination="@id/login" />
+    </fragment>
     <fragment
         android:id="@+id/home2"
         android:name="com.example.kamatechs.Home"
-        android:label="KAMATECHS"
+        android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_home2_to_login"
-            app:destination="@id/navigation2" />
+            android:id="@+id/action_home2_to_room"
+            app:destination="@id/room" />
         <action
-            android:id="@+id/action_home2_to_register"
-            app:destination="@id/register" />
+            android:id="@+id/action_home2_to_weather"
+            app:destination="@id/weather" />
     </fragment>
     <fragment
-        android:id="@+id/about2"
+        android:id="@+id/about"
         android:name="com.example.kamatechs.About"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
     <fragment
-        android:id="@+id/FAQ2"
+        android:id="@+id/FAQ"
         android:name="com.example.kamatechs.FAQ"
         android:label="fragment_faq"
         tools:layout="@layout/fragment_faq" />
     <activity
         android:id="@+id/weather"
-        android:name="com.example.kamatechs.Weather"
+        android:name="com.example.kamatechs.API.Weather"
         android:label="activity_weather"
         tools:layout="@layout/activity_weather" />
     <activity
-        android:id="@+id/register"
-        android:name="com.example.kamatechs.Register"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
-    <navigation android:id="@+id/navigation2"
-        app:startDestination="@id/login">
-        <activity
-            android:id="@+id/login"
-            android:name="com.example.kamatechs.Login"
-            android:label="fragment_login"
-            tools:layout="@layout/fragment_login" />
-        <action
-            android:id="@+id/action_global_weather"
-            app:destination="@id/weather" />
-    </navigation>
-    <activity
-        android:id="@+id/insert"
-        android:name="com.example.kamatechs.Insert"
-        android:label="fragment_insert"
-        tools:layout="@layout/fragment_insert" />
-
+        android:id="@+id/room"
+        android:name="com.example.kamatechs.Room"
+        android:label="room"
+        tools:layout="@layout/room" />
 </navigation>

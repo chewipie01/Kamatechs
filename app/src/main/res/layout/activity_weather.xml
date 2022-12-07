@@ -17,7 +17,7 @@
         android:layout_height="match_parent"
         android:padding="25dp"
         android:background="@drawable/gradient_bg"
-        tools:context="com.example.kamatechs.Weather">
+        tools:context="com.example.kamatechs.API.Weather">
 
             <RelativeLayout
                 android:id="@+id/mainContainer"

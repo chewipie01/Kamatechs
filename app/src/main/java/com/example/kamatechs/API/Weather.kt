@@ -1,8 +1,7 @@
-package com.example.kamatechs
+package com.example.kamatechs.API
 
 import android.os.AsyncTask
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
@@ -10,10 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
-import com.google.android.material.appbar.MaterialToolbar
-import com.google.android.material.navigation.NavigationView
+import com.example.kamatechs.R
 import org.json.JSONObject
 import java.net.URL
 import java.text.SimpleDateFormat

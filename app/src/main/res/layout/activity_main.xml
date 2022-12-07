@@ -22,7 +22,7 @@
                 app:navGraph="@navigation/navigation"
                 app:defaultNavHost="true"
                 tools:ignore="FragmentTagUsage"
-                tools:layout="@layout/fragment_home" />
+                tools:layout="@layout/fragment_login" />
 
         </LinearLayout>
 

@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Kamatechs"
         tools:targetApi="31">
         <activity
-            android:name=".Weather"
+            android:name=".API.Weather"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -36,21 +36,22 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".login.Login"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".Home"
             android:exported="true">
         </activity>
         <activity
-            android:name=".Register"
+            android:name=".register.Register"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".Login"
+            android:name=".Room"
             android:exported="true">
-        </activity>
-        <activity
-            android:name=".Insert"
-            android:exported="true">
+
         </activity>
 
         <meta-data

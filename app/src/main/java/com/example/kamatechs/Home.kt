@@ -16,15 +16,15 @@ class Home : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        (activity as AppCompatActivity).supportActionBar?.title = "Home"
+
         val binding = DataBindingUtil.inflate<FragmentHomeBinding>(
             inflater, R.layout.fragment_home, container, false
         )
-        binding.btnLogin.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_home2_to_login)
+       binding.btnLogin.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_home2_to_room)
         }
         binding.btnReg.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_home2_to_register)
+            view.findNavController().navigate(R.id.action_home2_to_weather)
         }
 
         setHasOptionsMenu(true)
@@ -39,6 +39,7 @@ class Home : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
+
 
 }
 
