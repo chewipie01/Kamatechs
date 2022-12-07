@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/home2"
         android:name="com.example.kamatechs.Home"
-        android:label="fragment_home"
+        android:label="KAMATECHS"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_home2_to_login"
