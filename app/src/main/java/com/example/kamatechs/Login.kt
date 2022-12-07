@@ -24,7 +24,6 @@ class Login : AppCompatActivity() {
         val actionbar = supportActionBar
         actionbar!!.title = "Login"
         actionbar.setDisplayHomeAsUpEnabled(true)
-        actionbar.setDisplayHomeAsUpEnabled(true)
 
         binding = FragmentLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -52,6 +51,7 @@ class Login : AppCompatActivity() {
             }
         }
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

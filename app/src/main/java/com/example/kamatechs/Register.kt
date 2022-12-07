@@ -20,6 +20,10 @@ class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val actionbar = supportActionBar
+        actionbar!!.title = "Register"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         binding = FragmentRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -31,11 +35,13 @@ class Register : AppCompatActivity() {
             val confirmPass = binding.retypepasswordEditText1.text.toString()
 
 
+
             if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
                 if (pass == confirmPass) {
 
                     firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
                         if (it.isSuccessful) {
+                            Toast.makeText(this, "Registration Successful !!", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this, Login::class.java)
                             startActivity(intent)
                         } else {
