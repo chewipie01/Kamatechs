@@ -50,6 +50,29 @@ class Room : AppCompatActivity() {
             updateData()
         }
 
+        binding.btnDeleteSingle.setOnClickListener {
+            deleteData()
+        }
+
+
+
+    }
+
+    private fun deleteData() {
+        val rollNo = binding.etRollNoRead.text.toString()
+
+        if (rollNo.isNotEmpty()){
+
+            lateinit var storage : Storage
+
+            GlobalScope.launch(Dispatchers.IO) {
+
+                appDb.storageDao().delete(rollNo.toInt())
+            }
+
+            Toast.makeText(this@Room,"Successfully Deleted", Toast.LENGTH_SHORT).show()
+
+        }else Toast.makeText(this@Room,"Please enter the data", Toast.LENGTH_SHORT).show()
     }
 
     private fun updateData() {

@@ -158,13 +158,14 @@
         style="@style/Widget.Kamatechs.Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginTop="52dp"
         android:fontFamily="@font/raleway_bold"
         android:text="Delete All"
         android:textColor="#6D4C41"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnReadData"
-        app:layout_constraintTop_toTopOf="@+id/btnReadData" />
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="@+id/tv_Temp"
+        app:layout_constraintTop_toBottomOf="@+id/btnReadData" />
 
     <View
         android:id="@+id/view"
@@ -189,5 +190,14 @@
         app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toEndOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/btn_write_data" />
+
+    <Button
+        android:id="@+id/btnDeleteSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:text="Delete Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnReadData" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
