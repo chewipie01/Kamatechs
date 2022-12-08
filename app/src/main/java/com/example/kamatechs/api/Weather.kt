@@ -22,6 +22,9 @@ class Weather: AppCompatActivity() {
         findViewById<View> (R.id.data_button).setOnClickListener {
             getCurrentData()
         }
+        val actionbar = supportActionBar
+        actionbar!!.title = "Weather API"
+        actionbar.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun getCurrentData() {
@@ -74,5 +77,10 @@ class Weather: AppCompatActivity() {
         var AppId = "f813e644951811d2f6ccee45c8492336"
         var lat = "15.44125"
         var lon = "120.72863"
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

@@ -19,4 +19,7 @@ interface StorageDao {
 
     @Query("DELETE FROM storage_table")
     suspend fun deleteAll()
+
+    @Query("UPDATE storage_table SET Temperature=:temperature, Humidity=:humidity WHERE roll_no LIKE :roll")
+    suspend fun update(temperature : Int, humidity : Int, roll : Int)
 }

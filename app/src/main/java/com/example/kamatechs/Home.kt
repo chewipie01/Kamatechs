@@ -2,8 +2,6 @@ package com.example.kamatechs
 
 import android.os.Bundle
 import android.view.*
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.databinding.DataBindingUtil
@@ -11,6 +9,7 @@ import androidx.navigation.ui.NavigationUI
 import com.example.kamatechs.databinding.FragmentHomeBinding
 
 class Home : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,6 +26,7 @@ class Home : Fragment() {
             view.findNavController().navigate(R.id.action_home2_to_weather)
         }
 
+
         setHasOptionsMenu(true)
         return binding.root
     }
@@ -37,10 +37,8 @@ class Home : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
-
 }
-
-
