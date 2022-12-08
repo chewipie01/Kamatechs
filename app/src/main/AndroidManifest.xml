@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Kamatechs"
         tools:targetApi="31">
         <activity
-            android:name=".API.Weather"
+            android:name=".api.Weather"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

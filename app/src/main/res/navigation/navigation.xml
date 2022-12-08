@@ -49,7 +49,7 @@
         tools:layout="@layout/fragment_faq" />
     <activity
         android:id="@+id/weather"
-        android:name="com.example.kamatechs.API.Weather"
+        android:name="com.example.kamatechs.api.Weather"
         android:label="activity_weather"
         tools:layout="@layout/activity_weather" />
     <activity

@@ -12,6 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/registerConstraint"
+        android:background="@drawable/gradient_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -77,16 +78,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/entryUsername" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegister"
+            style="@style/Widget.Kamatechs.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
+            android:fontFamily="@font/raleway_bold"
             android:text="Register"
+            android:textColor="#6D4C41"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/entryPassword"
             android:onClick="@{()->registerViewModel.registerButton()}"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

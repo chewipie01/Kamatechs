@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
     tools:context=".Room">
 
     <TextView
@@ -56,15 +57,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Humid" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_write_data"
+        style="@style/Widget.Kamatechs.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/raleway_bold"
+        android:textColor="#6D4C41"
         android:text="Write Data"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_roll_no" />
+
 
     <EditText
         android:id="@+id/et_roll_no_read"
@@ -80,12 +85,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_write_data" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnReadData"
+        style="@style/Widget.Kamatechs.Button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="169dp"
+        android:fontFamily="@font/raleway_bold"
+        android:textColor="#6D4C41"
         android:text="Read Data"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,11 +127,14 @@
         app:layout_constraintStart_toStartOf="@+id/tv_last_name"
         app:layout_constraintTop_toBottomOf="@+id/tv_last_name" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_delete_all"
+        style="@style/Widget.Kamatechs.Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:fontFamily="@font/raleway_bold"
+        android:textColor="#6D4C41"
         android:text="Delete All"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnReadData"
