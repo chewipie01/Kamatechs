@@ -45,6 +45,31 @@ class Room : AppCompatActivity() {
             }
 
         }
+
+        binding.btnUpdate.setOnClickListener {
+            updateData()
+        }
+
+    }
+
+    private fun updateData() {
+        val rollNo = binding.etRollNo.text.toString()
+        val temperature = binding.Temp.text.toString()
+        val humidity  = binding.Humid.text.toString()
+
+        if(temperature.isNotEmpty() && humidity.isNotEmpty() && rollNo.isNotEmpty()     ) {
+
+            GlobalScope.launch(Dispatchers.IO) {
+
+                appDb.storageDao().update(temperature.toInt(),humidity.toInt(),rollNo.toInt())
+            }
+
+            binding.Temp.text?.clear()
+            binding.Humid.text?.clear()
+            binding.etRollNo.text?.clear()
+
+            Toast.makeText(this@Room,"Successfully Updated",Toast.LENGTH_SHORT).show()
+        }else Toast.makeText(this@Room,"PLease Enter Data",Toast.LENGTH_SHORT).show()
     }
 
     private fun writeData(){
@@ -66,7 +91,7 @@ class Room : AppCompatActivity() {
             binding.Humid.text?.clear()
             binding.etRollNo.text?.clear()
 
-            Toast.makeText(this@Room,"Successfully written",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@Room,"Successfully Written",Toast.LENGTH_SHORT).show()
         }else Toast.makeText(this@Room,"PLease Enter Data",Toast.LENGTH_SHORT).show()
 
     }
