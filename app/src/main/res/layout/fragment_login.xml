@@ -16,63 +16,90 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="102dp"
+            android:layout_height="84dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="152dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="157dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo2" />
+
         <TextView
             android:id="@+id/txtTitle"
+            style="@style/TextAppearance.Kamatechs.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="24dp"
             android:text="KAMATECHS"
-            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/txtLogin"
+            style="@style/TextAppearance.Kamatechs.Subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="32dp"
             android:text="Login"
-            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
-        <EditText
-            android:id="@+id/entryUsername"
-            android:layout_width="355dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="32dp"
-            android:ems="10"
-            android:hint="Type your username"
-            android:inputType="textPersonName"
-            android:text="@={loginViewModel.inputUsername}"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/entryUsername"
+            style="@style/Widget.Kamatechs.TextInputLayout"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="Username"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtLogin" />
+            app:layout_constraintTop_toBottomOf="@+id/txtLogin">
 
-        <EditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:text="@={loginViewModel.inputUsername}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/entryPassword"
-            android:layout_width="355dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="40dp"
-            android:ems="10"
-            android:hint="Type your password"
-            android:inputType="textPassword"
-            android:text="@={loginViewModel.inputPassword}"
+            style="@style/Widget.Kamatechs.TextInputLayout"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Password"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/entryUsername" />
+            app:layout_constraintTop_toBottomOf="@+id/entryUsername">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="@={loginViewModel.inputPassword}"
+                app:layout_constraintTop_toBottomOf="@+id/entryUsername" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnReg"
             style="@style/Widget.Kamatechs.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="@font/raleway_bold"
             android:text="Register"
             android:textColor="#6D4C41"
@@ -85,15 +112,14 @@
             style="@style/Widget.Kamatechs.Button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="@font/raleway_bold"
+            android:onClick="@{()->loginViewModel.loginButton()}"
             android:text="Login"
             android:textColor="#6D4C41"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnReg"
-            app:layout_constraintTop_toBottomOf="@+id/entryPassword"
-            android:onClick="@{()->loginViewModel.loginButton()}"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/entryPassword" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
