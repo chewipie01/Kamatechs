@@ -3,10 +3,29 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:title="@string/home"
+        android:id="@+id/home2"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item
+        android:title="Room"
+        android:id="@+id/room"
+        />
+    <item
+        android:title="Weather"
+        android:id="@+id/weather"
+        />
+    <item
         android:id="@+id/about"
-        android:title="@string/about2"/>
+        android:title="@string/about2"
+        android:icon="@drawable/ic_baseline_info_24"/>
     <item
         android:id="@+id/FAQ"
-        android:title="@string/faq2" />
+        android:title="@string/faq2"
+        android:icon="@drawable/ic_baseline_question_mark_24"/>
+    <item
+        android:id="@+id/login"
+        android:title="Logout"
+        />
+
 
 </menu>
