@@ -2,6 +2,7 @@ package com.example.kamatechs
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.databinding.DataBindingUtil
@@ -15,22 +16,21 @@ class Home : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        (activity as AppCompatActivity).supportActionBar?.title = "HOME"
 
         val binding = DataBindingUtil.inflate<FragmentHomeBinding>(
             inflater, R.layout.fragment_home, container, false
         )
        binding.btnLogin.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_home2_to_room)
+            view.findNavController().navigate(R.id.action_home2_to_listFragment)
         }
         binding.btnReg.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_home2_to_weather)
         }
 
-
         setHasOptionsMenu(true)
         return binding.root
     }
-
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.options_menu, menu)
@@ -41,4 +41,4 @@ class Home : Fragment() {
                 || super.onOptionsItemSelected(item)
     }
 
-}
+    }

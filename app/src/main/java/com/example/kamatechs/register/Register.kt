@@ -28,6 +28,7 @@ class Register : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as AppCompatActivity).supportActionBar?.title = "REGISTER"
         val binding = DataBindingUtil.inflate<FragmentRegisterBinding>(
             inflater,
             R.layout.fragment_register,

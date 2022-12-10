@@ -21,8 +21,8 @@
                 android:layout_height="match_parent"
                 app:navGraph="@navigation/navigation"
                 app:defaultNavHost="true"
-                tools:ignore="FragmentTagUsage"
-                tools:layout="@layout/fragment_login" />
+                tools:layout="@layout/fragment_login"
+                />
 
         </LinearLayout>
 

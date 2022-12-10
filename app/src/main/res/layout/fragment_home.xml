@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.kamatechs.Home">
+    tools:context=".Home">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:background="@drawable/gradient_bg"
@@ -82,6 +82,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

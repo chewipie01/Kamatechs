@@ -5,24 +5,19 @@ import androidx.room.*
 
 @Dao
 interface StorageDao {
-    @Query("SELECT * FROM storage_table")
-    fun getAll(): List<Storage>
+    @Insert(onConflict = OnConflictStrategy.IGNORE) // <- Annotate the 'addUser' function below. Set the onConflict strategy to IGNORE so if exactly the same user exists, it will just ignore it.
+    suspend fun addStorage(storage: Storage)
 
-    @Query("SELECT * FROM storage_table WHERE roll_no LIKE :roll LIMIT 1")
-    suspend fun findByRoll(roll: Int): Storage
-
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(storage: Storage)
+    @Update
+    suspend fun updateStorage(storage: Storage)
 
     @Delete
-    suspend fun delete(storage: Storage)
+    suspend fun deleteStorage(storage: Storage)
 
     @Query("DELETE FROM storage_table")
-    suspend fun deleteAll()
+    suspend fun deleteAllStorages()
 
-    @Query("UPDATE storage_table SET Temperature=:temperature, Humidity=:humidity WHERE roll_no LIKE :roll")
-    suspend fun update(temperature : Int, humidity : Int, roll : Int)
+    @Query("SELECT * from storage_table ORDER BY id ASC") // <- Add a query to fetch all users (in user_table) in ascending order by their IDs.
+    fun readAllData(): LiveData<List<Storage>> // <- This means function return type is List. Specifically, a List of Users.
 
-    @Query("DELETE FROM storage_table WHERE roll_no LIKE :roll")
-    suspend fun delete(roll: Int)
 }

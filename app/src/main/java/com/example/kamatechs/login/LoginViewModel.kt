@@ -2,6 +2,7 @@ package com.example.kamatechs.login
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -13,6 +14,7 @@ import kotlinx.coroutines.launch
 class LoginViewModel (val database: UserDatabaseDao,
                       application: Application
 ) : AndroidViewModel(application) {
+
 
     val inputUsername = MutableLiveData<String>()
 
@@ -39,6 +41,7 @@ class LoginViewModel (val database: UserDatabaseDao,
                         inputUsername.postValue("")
                         inputPassword.postValue("")
                         _navigateToHome.postValue(true)
+
                     } else {
 //                        error handling
                     }

@@ -18,6 +18,7 @@ class Weather: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
 
+
         weatherData = findViewById(R.id.textView)
         findViewById<View> (R.id.data_button).setOnClickListener {
             getCurrentData()

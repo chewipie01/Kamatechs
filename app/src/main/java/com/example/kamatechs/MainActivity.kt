@@ -15,20 +15,24 @@ import androidx.navigation.ui.NavigationUI
 import com.example.kamatechs.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
+        val actionbar = supportActionBar
+        actionbar!!.title = "LOGIN"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         drawerLayout = binding.drawerLayout
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
         NavigationUI.setupWithNavController(binding.navView, navController)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
     }
 
@@ -36,4 +40,5 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return NavigationUI.navigateUp(navController, drawerLayout)
     }
+
 }
