@@ -6,6 +6,7 @@ import android.text.Editable
 import android.text.TextUtils
 import android.view.*
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -30,7 +31,7 @@ class UpdateFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentUpdateBinding.inflate(inflater, container, false)
-
+        (activity as AppCompatActivity).supportActionBar?.title = "Update Data"
         mUserViewModel = ViewModelProvider(this).get(StorageViewModel::class.java)
 
 
@@ -59,12 +60,12 @@ class UpdateFragment : Fragment() {
 
             // Update Current User
             mUserViewModel.updateStorage(updatedStorage)
-            Toast.makeText(requireContext(), "Updated Successfully !", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Updated Successfully!", Toast.LENGTH_SHORT).show()
 
             // Navigate back to List Fragment
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         } else {
-            Toast.makeText(requireContext(), "Please fill all fields !", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Please fill all fields!", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -93,14 +94,14 @@ class UpdateFragment : Fragment() {
             mUserViewModel.deleteStorage(args.currentStorage)    // Execute : delete user
             Toast.makeText(                                // Notification if a user is deleted successfully
                 requireContext(),
-                "Successfully removed ${args.currentStorage.Temperature}",
+                "Successfully removed the data!",
                 Toast.LENGTH_SHORT)
                 .show()
             findNavController().navigate(R.id.action_updateFragment_to_listFragment) // Navigate to List Fragment after deleting a user
         }
         builder.setNegativeButton("No") { _, _ -> }    // Make a "No" option and set action if the user selects "No"
-        builder.setTitle("Delete ${args.currentStorage.Temperature} ?")  // Set the title of the prompt with a sentence saying the first name of the user inside the app (using template string)
-        builder.setMessage("Are you sure to remove ${args.currentStorage.Temperature} ?")  // Set the message of the prompt with a sentence saying the first name of the user inside the app (using template string)
+        builder.setTitle("Delete?")  // Set the title of the prompt with a sentence saying the first name of the user inside the app (using template string)
+        builder.setMessage("Are you sure you want to remove the data?")  // Set the message of the prompt with a sentence saying the first name of the user inside the app (using template string)
         builder.create().show()  // Create a prompt with the configuration above to ask the user (the real app user which is human)
     }
 

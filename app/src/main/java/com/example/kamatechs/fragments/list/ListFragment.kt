@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -27,7 +28,7 @@ class ListFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentListBinding.inflate(inflater, container, false)
         // val view = inflater.inflate(R.layout.fragment_list, container, false) // <- This is not required.
-
+        (activity as AppCompatActivity).supportActionBar?.title = "Storage Database"
         // RecyclerView
         val adapter = ListAdapter()
         // val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerview) // <- This is replaced.
@@ -75,8 +76,8 @@ class ListFragment : Fragment() {
             // Note: No need to navigate app user to List Fragment since deleting all users takes place at List Fragment.
         }
         builder.setNegativeButton("No") { _, _ -> }    // Make a "No" option and set action if the user selects "No"
-        builder.setTitle("Delete everything ?")  // Set the title of the prompt with a sentence saying the first name of the user inside the app (using template string)
-        builder.setMessage("Are you sure to remove everything ?")  // Set the message of the prompt with a sentence saying the first name of the user inside the app (using template string)
+        builder.setTitle("Delete everything?")  // Set the title of the prompt with a sentence saying the first name of the user inside the app (using template string)
+        builder.setMessage("Are you sure you want to remove everything?")  // Set the message of the prompt with a sentence saying the first name of the user inside the app (using template string)
         builder.create().show()  // Create a prompt with the configuration above to ask the user (the real app user which is human)
     }
 

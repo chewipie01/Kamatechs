@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -28,7 +29,7 @@ class AddFragment: Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentAddBinding.inflate(inflater, container, false)
-
+        (activity as AppCompatActivity).supportActionBar?.title = "Add Data"
         mStorageViewModel = ViewModelProvider(this).get(StorageViewModel::class.java)
 
         binding.addBtn.setOnClickListener {
@@ -52,7 +53,7 @@ class AddFragment: Fragment() {
 
             // Add Data to database
             mStorageViewModel.addStorage(storage)
-            Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Successfully added the data!", Toast.LENGTH_LONG).show()
             // Navigate back
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         } else {
@@ -61,7 +62,7 @@ class AddFragment: Fragment() {
     }
 
 
-    private fun inputCheck(temperature: Editable, humidity: Editable): Boolean {
+    private fun inputCheck(temperature: Editable?, humidity: Editable?): Boolean {
         return !(TextUtils.isEmpty(temperature) && TextUtils.isEmpty(humidity))
     }
 

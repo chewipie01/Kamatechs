@@ -59,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:hint="Username"
+            app:startIconDrawable="@drawable/person"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtLogin">
@@ -78,6 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Password"
+            app:startIconDrawable="@drawable/pw"
             app:endIconMode="password_toggle"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
