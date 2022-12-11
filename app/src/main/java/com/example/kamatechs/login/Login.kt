@@ -16,6 +16,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.kamatechs.R
 import com.example.kamatechs.database.UserDatabase
 import com.example.kamatechs.databinding.FragmentLoginBinding
+import com.google.android.material.snackbar.Snackbar
 
 
 class Login : Fragment() {
@@ -48,8 +49,13 @@ class Login : Fragment() {
             if(hasFinished == true){
                 navigatetoHome()
                 loginViewModel.doneNavigating()
+                Snackbar.make(requireView(), "Login Successful", Snackbar.LENGTH_SHORT).show()
             }
-        })
+ //           else Snackbar.make(requireView(), "Wrong Username or Password", Snackbar.LENGTH_SHORT).show()
+        }
+        )
+
+
 
         binding.loginViewModel = loginViewModel
 

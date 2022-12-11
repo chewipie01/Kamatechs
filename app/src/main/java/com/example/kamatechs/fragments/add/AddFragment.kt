@@ -15,6 +15,7 @@ import com.example.kamatechs.R
 import com.example.kamatechs.databinding.FragmentAddBinding
 import com.example.kamatechs.database.Storage
 import com.example.kamatechs.viewModel.StorageViewModel
+import com.google.android.material.snackbar.Snackbar
 
 class AddFragment: Fragment() {
 
@@ -53,11 +54,11 @@ class AddFragment: Fragment() {
 
             // Add Data to database
             mStorageViewModel.addStorage(storage)
-            Toast.makeText(requireContext(), "Successfully added the data!", Toast.LENGTH_LONG).show()
+            Snackbar.make(requireView(), "Successfully Added!", Snackbar.LENGTH_SHORT).show()
             // Navigate back
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         } else {
-            Toast.makeText(requireContext(), "Please fill out all fields!", Toast.LENGTH_LONG).show()
+            Snackbar.make(requireView(), "Please fill out all fields!", Snackbar.LENGTH_LONG).show()
         }
     }
 

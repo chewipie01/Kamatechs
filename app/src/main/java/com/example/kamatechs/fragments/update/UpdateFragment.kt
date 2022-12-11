@@ -15,6 +15,7 @@ import com.example.kamatechs.R
 import com.example.kamatechs.databinding.FragmentUpdateBinding
 import com.example.kamatechs.database.Storage
 import com.example.kamatechs.viewModel.StorageViewModel
+import com.google.android.material.snackbar.Snackbar
 
 class UpdateFragment : Fragment() {
 
@@ -60,12 +61,12 @@ class UpdateFragment : Fragment() {
 
             // Update Current User
             mUserViewModel.updateStorage(updatedStorage)
-            Toast.makeText(requireContext(), "Updated Successfully!", Toast.LENGTH_SHORT).show()
+            Snackbar.make(requireView(), "Updated Successfully!", Snackbar.LENGTH_SHORT).show()
 
             // Navigate back to List Fragment
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         } else {
-            Toast.makeText(requireContext(), "Please fill all fields!", Toast.LENGTH_SHORT).show()
+            Snackbar.make(requireView(), "Please fill all fields!", Snackbar.LENGTH_LONG).show()
         }
     }
 

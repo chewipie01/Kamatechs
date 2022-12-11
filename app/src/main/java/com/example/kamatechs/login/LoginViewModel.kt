@@ -2,7 +2,6 @@ package com.example.kamatechs.login
 
 import android.annotation.SuppressLint
 import android.app.Application
-import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -28,6 +27,7 @@ class LoginViewModel (val database: UserDatabaseDao,
     @SuppressLint("NullSafeMutableLiveData")
     fun doneNavigating() {
         _navigateToHome.postValue(null)
+
     }
 
     fun loginButton() {
