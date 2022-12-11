@@ -26,6 +26,7 @@ class WeatherResponse {
     @SerializedName("name")
     var name: String? = null
 
+
 }
 
 class WeatherData {
