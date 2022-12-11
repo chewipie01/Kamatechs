@@ -24,7 +24,7 @@ class Weather: AppCompatActivity() {
             getCurrentData()
         }
         val actionbar = supportActionBar
-        actionbar!!.title = "Weather API"
+        actionbar!!.title = "Weather"
         actionbar.setDisplayHomeAsUpEnabled(true)
     }
 

@@ -7,12 +7,14 @@
         android:id="@+id/home2"
         android:icon="@drawable/ic_baseline_home_24"/>
     <item
-        android:title="Room"
-        android:id="@+id/room"
+        android:title="Storage Database"
+        android:id="@+id/listFragment"
+        android:icon="@drawable/storage"
         />
     <item
         android:title="Weather"
         android:id="@+id/weather"
+        android:icon="@drawable/cloud"
         />
     <item
         android:id="@+id/about"
