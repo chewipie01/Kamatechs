@@ -10,22 +10,23 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.*
 
 class Weather: AppCompatActivity() {
     private var weatherData: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
 
 
         weatherData = findViewById(R.id.textView)
-        findViewById<View> (R.id.data_button).setOnClickListener {
+        findViewById<View>(R.id.data_button).setOnClickListener {
             getCurrentData()
         }
         val actionbar = supportActionBar
         actionbar!!.title = "Weather"
         actionbar.setDisplayHomeAsUpEnabled(true)
+
     }
 
     private fun getCurrentData() {
@@ -79,6 +80,7 @@ class Weather: AppCompatActivity() {
         var lat = "15.44125"
         var lon = "120.72863"
     }
+
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()

@@ -1,6 +1,5 @@
 package com.example.kamatechs.login
 
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,12 +11,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import com.example.kamatechs.R
 import com.example.kamatechs.database.UserDatabase
 import com.example.kamatechs.databinding.FragmentLoginBinding
 import com.google.android.material.snackbar.Snackbar
-
 
 class Login : Fragment() {
     override fun onCreateView(
@@ -52,10 +49,7 @@ class Login : Fragment() {
                 Snackbar.make(requireView(), "Login Successful", Snackbar.LENGTH_SHORT).show()
             }
  //           else Snackbar.make(requireView(), "Wrong Username or Password", Snackbar.LENGTH_SHORT).show()
-        }
-        )
-
-
+        })
 
         binding.loginViewModel = loginViewModel
 
@@ -67,5 +61,6 @@ class Login : Fragment() {
         val action = LoginDirections.actionLoginToHome2()
         NavHostFragment.findNavController(this).navigate(action)
     }
+
 }
 

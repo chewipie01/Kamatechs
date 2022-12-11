@@ -6,8 +6,7 @@
     <androidx.drawerlayout.widget.DrawerLayout
         android:id ="@+id/drawerLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,10 +18,9 @@
                 android:name="androidx.navigation.fragment.NavHostFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:navGraph="@navigation/navigation"
                 app:defaultNavHost="true"
-                tools:layout="@layout/fragment_login"
-                />
+                app:navGraph="@navigation/navigation"
+                tools:layout="@layout/fragment_login" />
 
         </LinearLayout>
 

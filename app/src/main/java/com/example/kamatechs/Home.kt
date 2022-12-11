@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.ui.NavigationUI
 import com.example.kamatechs.databinding.FragmentHomeBinding
 
+
 class Home : Fragment() {
 
     override fun onCreateView(
@@ -21,11 +22,29 @@ class Home : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentHomeBinding>(
             inflater, R.layout.fragment_home, container, false
         )
-       binding.btnLogin.setOnClickListener { view: View ->
+        binding.btnLogin.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_home2_to_listFragment)
         }
         binding.btnReg.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_home2_to_weather)
+        }
+
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.about -> {
+                    replaceFragment(About())
+                    true
+                }
+                R.id.home2 -> {
+                    replaceFragment(Home())
+                    true
+                }
+                R.id.FAQ -> {
+                    replaceFragment(FAQ())
+                    true
+                }
+                else -> false
+            }
         }
 
         setHasOptionsMenu(true)
@@ -41,4 +60,11 @@ class Home : Fragment() {
                 || super.onOptionsItemSelected(item)
     }
 
+    private  fun replaceFragment(fragment: Fragment){
+        val fragmentManager = childFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.homelayout,fragment)
+        fragmentTransaction.addToBackStack(null).commit()
     }
+
+}
