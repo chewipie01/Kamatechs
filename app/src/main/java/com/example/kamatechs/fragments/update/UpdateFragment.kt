@@ -93,11 +93,9 @@ class UpdateFragment : Fragment() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton("Yes") { _, _ ->     // Make a "Yes" option and set action if the user selects "Yes"
             mUserViewModel.deleteStorage(args.currentStorage)    // Execute : delete user
-            Toast.makeText(                                // Notification if a user is deleted successfully
-                requireContext(),
-                "Successfully removed the data!",
-                Toast.LENGTH_SHORT)
-                .show()
+
+            Snackbar.make(requireView(),  // Notification if a user is deleted successfully
+                "Successfully removed the data!", Snackbar.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateFragment_to_listFragment) // Navigate to List Fragment after deleting a user
         }
         builder.setNegativeButton("No") { _, _ -> }    // Make a "No" option and set action if the user selects "No"
