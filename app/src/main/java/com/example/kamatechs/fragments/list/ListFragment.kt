@@ -3,7 +3,6 @@ package com.example.kamatechs.fragments.list
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -84,5 +83,3 @@ class ListFragment : Fragment() {
         _binding = null // <- whenever we destroy our fragment, _binding is set to null. Hence it will avoid memory leaks.
     }
 }
-
-

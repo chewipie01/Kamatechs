@@ -72,4 +72,5 @@ class AddFragment: Fragment() {
         _binding = null // <- whenever we destroy our fragment, _binding is set to null. Hence it will avoid memory leaks.
     }
 
+
 }
