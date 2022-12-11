@@ -10,9 +10,12 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.text.SimpleDateFormat
+import java.util.*
 
 class Weather: AppCompatActivity() {
     private var address: TextView? = null
+    private var updated: TextView? = null
     private var temp: TextView? = null
     private var temp_min: TextView? = null
     private var temp_max: TextView? = null
@@ -25,6 +28,7 @@ class Weather: AppCompatActivity() {
         setContentView(R.layout.activity_weather)
 
         address = findViewById(R.id.country)
+        updated = findViewById(R.id.updated)
         temp = findViewById(R.id.temp)
         temp_min  = findViewById(R.id.temp_min)
         temp_max = findViewById(R.id.temp_max)
@@ -56,6 +60,8 @@ class Weather: AppCompatActivity() {
 
                     val location = weatherResponse.name + ", " + weatherResponse.sys!!.country
                     val tempe = "" + weatherResponse.main!!.temp + "°C"
+                    val updatedAt = weatherResponse.dt.toLong()
+                    val upd = "Updated at: "+ SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.ENGLISH).format(Date(updatedAt*1000))
                     val tempMin = "Min Temp: " + weatherResponse.main!!.temp_min + "°C"
                     val tempMax = "Max Temp: " + weatherResponse.main!!.temp_max + "°C"
                     val humid =  weatherResponse.main!!.humidity
@@ -63,6 +69,7 @@ class Weather: AppCompatActivity() {
                     val speed = weatherResponse.wind!!.speed
 
                     address!!.text = location
+                    updated!!.text = upd
                     temp!!.text = tempe
                     temp_min!!.text = tempMin
                     temp_max!!.text = tempMax
@@ -75,6 +82,7 @@ class Weather: AppCompatActivity() {
             override fun onFailure (call: Call<WeatherResponse>, t: Throwable){
                 address!!.text = t.message
                 temp!!.text = t.message
+                updated!!.text = t.message
                 temp_min!!.text = t.message
                 temp_max!!.text = t.message
                 humidity!!.text = t.message
