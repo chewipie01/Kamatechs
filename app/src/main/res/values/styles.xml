@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="snackbarStyle">@style/Widget.App.Snackbar</item>
     </style>
 
     <style name="Widget.Kamatechs.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -77,6 +78,13 @@
         <item name="android:fontFamily">@font/raleway</item>
     </style>
 
+    <style name="Widget.App.Snackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Snackbar</item>
+        <item name="actionTextColorAlpha">1</item>
+    </style>
 
-
+    <style name="ThemeOverlay.App.Snackbar" parent="">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorOnSurface">@color/textColorPrimary</item>
+    </style>
 </resources>

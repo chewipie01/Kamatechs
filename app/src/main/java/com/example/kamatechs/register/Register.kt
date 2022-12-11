@@ -17,9 +17,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.kamatechs.R
 import com.example.kamatechs.database.UserDatabase
 import com.example.kamatechs.databinding.FragmentRegisterBinding
-
-
-
+import com.google.android.material.snackbar.Snackbar
 
 
 class Register : Fragment() {
@@ -51,6 +49,7 @@ class Register : Fragment() {
                 R.id.action_register3_to_login
             )
             registerViewModel.doneNavigating()
+            Snackbar.make(requireView(), "Registration Successful", Snackbar.LENGTH_SHORT).show()
         })
 
         binding.registerViewModel = registerViewModel

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kamatechs.R
 import com.example.kamatechs.databinding.FragmentListBinding
 import com.example.kamatechs.viewModel.StorageViewModel
+import com.google.android.material.snackbar.Snackbar
 
 class ListFragment : Fragment() {
 
@@ -68,11 +69,8 @@ class ListFragment : Fragment() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton("Yes") { _, _ ->     // Make a "Yes" option and set action if the user selects "Yes"
             mUserViewModel.deleteAllStorages()    // Execute : delete all users
-            Toast.makeText(                                // Notification if a user is deleted successfully
-                requireContext(),
-                "Successfully removed everything",
-                Toast.LENGTH_SHORT)
-                .show()
+            // Notification if a user is deleted successfully
+            Snackbar.make(requireView(), "Successfully Removed Everything", Snackbar.LENGTH_LONG).show()
             // Note: No need to navigate app user to List Fragment since deleting all users takes place at List Fragment.
         }
         builder.setNegativeButton("No") { _, _ -> }    // Make a "No" option and set action if the user selects "No"
