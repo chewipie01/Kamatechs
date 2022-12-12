@@ -46,7 +46,12 @@ class Login : Fragment() {
             if(hasFinished == true){
                 navigatetoHome()
                 loginViewModel.doneNavigating()
-                Snackbar.make(requireView(), "Login Successful", Snackbar.LENGTH_SHORT).show()
+                val snack = Snackbar.make(requireView(), "Login Successful", Snackbar.LENGTH_SHORT)
+                snack.setAction("DISMISS", View.OnClickListener {
+                    // executed when DISMISS is clicked
+                    System.out.println("Snackbar Set Action - OnClick.")
+                    })
+                snack.show()
             }
  //           else Snackbar.make(requireView(), "Wrong Username or Password", Snackbar.LENGTH_SHORT).show()
         })

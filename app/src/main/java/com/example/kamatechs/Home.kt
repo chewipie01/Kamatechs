@@ -29,6 +29,7 @@ class Home : Fragment() {
             view.findNavController().navigate(R.id.action_home2_to_weather)
         }
 
+        binding.bottomNavigation.setSelectedItemId(R.id.home2)
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.about -> {
