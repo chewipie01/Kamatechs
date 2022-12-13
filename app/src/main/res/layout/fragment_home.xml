@@ -5,6 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Home">
 
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id ="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -24,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
-                android:layout_marginTop="67dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginEnd="36dp"
                 android:fontFamily="@font/raleway_bold"
                 android:text="@string/welcome_to_kamatechs"
@@ -32,6 +37,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,35 +49,38 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="52dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/your_no_1_tomato_assistant"
-                android:textSize="24sp"
+                android:text="Your no. 1 go to storage status database and weather checker application for Tomato Cooling Storage Devices."
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.539"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
             <ImageView
                 android:id="@+id/imgTomato"
-                android:layout_width="252dp"
-                android:layout_height="275dp"
+                android:layout_width="228dp"
+                android:layout_height="246dp"
                 android:layout_marginStart="79dp"
-                android:layout_marginTop="47dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="80dp"
+                android:contentDescription="@string/todoooo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView14"
-                app:srcCompat="@drawable/tomato"
-                android:contentDescription="@string/todoooo" />
+                app:srcCompat="@drawable/tomato" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
                 style="@style/Widget.Kamatechs.Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="282dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="109dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="110dp"
                 android:fontFamily="@font/raleway_bold"
-                android:text="@string/storage_database"
+                android:text="STORAGE DEVICE STATUS"
                 android:textColor="#6D4C41"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -106,5 +115,17 @@
             style="@style/Widget.App.BottomNavigationView"/>
 
     </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/navdrawer_menu"
+            />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
 
 </layout>

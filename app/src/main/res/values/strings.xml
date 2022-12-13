@@ -34,4 +34,5 @@
     <string name="btn">TODO</string>
     <string name="storage_database">Storage Database</string>
     <string name="weather_api">WEATHER API</string>
+    <string name="logoutt">LOGOUT</string>
 </resources>

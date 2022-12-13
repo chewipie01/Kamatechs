@@ -82,4 +82,5 @@ class ListFragment : Fragment() {
         super.onDestroyView()
         _binding = null // <- whenever we destroy our fragment, _binding is set to null. Hence it will avoid memory leaks.
     }
+
 }

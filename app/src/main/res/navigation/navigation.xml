@@ -85,4 +85,14 @@
             android:name="currentStorage"
             app:argType="com.example.kamatechs.database.Storage" />
     </fragment>
+    <fragment
+        android:id="@+id/privatePolicy"
+        android:name="com.example.kamatechs.PrivatePolicy"
+        android:label="activity_privacy"
+        tools:layout="@layout/activity_privacy" />
+    <fragment
+        android:id="@+id/developers"
+        android:name="com.example.kamatechs.Developers"
+        android:label="fragment_developers"
+        tools:layout="@layout/fragment_developers" />
 </navigation>

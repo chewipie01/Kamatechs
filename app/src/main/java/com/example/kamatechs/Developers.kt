@@ -7,17 +7,15 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 
-
-class About : Fragment() {
-
+class Developers : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        (activity as AppCompatActivity).supportActionBar?.title = "ABOUT"
-        return inflater.inflate(R.layout.fragment_about, container, false)
+        (activity as AppCompatActivity).supportActionBar?.title = "DEVELOPERS"
+        return inflater.inflate(R.layout.fragment_developers, container, false)
     }
 
 }
