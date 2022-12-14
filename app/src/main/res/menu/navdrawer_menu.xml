@@ -7,7 +7,7 @@
         android:id="@+id/home2"
         android:icon="@drawable/ic_baseline_home_24"/>
     <item
-        android:title="Storage Database"
+        android:title="Storage Device Status"
         android:id="@+id/listFragment"
         android:icon="@drawable/storage"
         />
