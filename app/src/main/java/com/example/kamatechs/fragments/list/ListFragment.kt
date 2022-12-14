@@ -28,7 +28,7 @@ class ListFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentListBinding.inflate(inflater, container, false)
         // val view = inflater.inflate(R.layout.fragment_list, container, false) // <- This is not required.
-        (activity as AppCompatActivity).supportActionBar?.title = "Storage Database"
+        (activity as AppCompatActivity).supportActionBar?.title = "Storage Device Status"
         // RecyclerView
         val adapter = ListAdapter()
         // val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerview) // <- This is replaced.

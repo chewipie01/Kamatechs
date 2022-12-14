@@ -22,7 +22,7 @@
             <RelativeLayout
                 android:id="@+id/mainContainer"
                 android:layout_width="wrap_content"
-                android:layout_height="565dp"
+                android:layout_height="589dp"
                 android:visibility="visible">
 
                 <LinearLayout
@@ -37,16 +37,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/raleway"
-                        android:text="Country"
-                        android:textColor="#000000"
+                        android:text="La Paz, PH"
+                        android:textColor="@color/colorAccent"
                         android:textSize="34sp" />
 
                     <TextView
                         android:id="@+id/updated"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Date"
-                        android:textColor="#000000"
+                        android:fontFamily="@font/raleway"
+                        android:text="Updated at: 12/14/2022 10:42 AM"
+                        android:textColor="@color/colorAccent"
                         android:textSize="16sp" />
 
 
@@ -66,8 +67,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="@font/raleway"
-                        android:text="Temp"
-                        android:textColor="#000000"
+                        android:text="30.76°C"
+                        android:textColor="@color/colorAccent"
                         android:textSize="90sp" />
 
                     <LinearLayout
@@ -81,8 +82,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/raleway"
-                            android:text="Min Temp"
-                            android:textColor="#000000"
+                            android:text="Min Temp: 30.76°C"
+                            android:textColor="@color/colorAccent"
                             android:textSize="16sp" />
 
                         <Space
@@ -94,8 +95,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/raleway"
-                            android:text="Max Temp"
-                            android:textColor="#000000"
+                            android:text="Max Temp: 30.76°C"
+                            android:textColor="@color/colorAccent"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -104,8 +105,9 @@
                 <LinearLayout
                     android:id="@+id/detailsContainer"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="162dp"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -118,7 +120,6 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="8dp">
@@ -138,7 +139,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway"
                                 android:text="Humidity"
-                                android:textColor="#000000"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -146,8 +147,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway"
-                                android:text="Text"
-                                android:textColor="#000000"
+                                android:text="65.0"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="16sp" />
                         </LinearLayout>
 
@@ -159,7 +160,6 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="8dp">
@@ -179,7 +179,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway"
                                 android:text="Pressure"
-                                android:textColor="#000000"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -187,8 +187,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway"
-                                android:text="Text"
-                                android:textColor="#000000"
+                                android:text="1012.0"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="16sp" />
                         </LinearLayout>
 
@@ -200,7 +200,6 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="8dp">
@@ -220,7 +219,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway"
                                 android:text="Wind"
-                                android:textColor="#000000"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -228,8 +227,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/raleway"
-                                android:text="Text"
-                                android:textColor="#000000"
+                                android:text="2.02"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="16sp" />
 
 
@@ -246,7 +245,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/raleway_bold"
                         android:text="Check the Current Weather"
+                        android:textColor="@color/colorAccent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/detailsContainer" />
