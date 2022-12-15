@@ -53,7 +53,12 @@ class AddFragment: Fragment() {
 
             // Add Data to database
             mStorageViewModel.addStorage(storage)
-            Snackbar.make(requireView(), "Successfully Added!", Snackbar.LENGTH_SHORT).show()
+            val snack = Snackbar.make(requireView(), "Added Successfully!", Snackbar.LENGTH_SHORT)
+            snack.setAction("DISMISS", View.OnClickListener {
+                // executed when DISMISS is clicked
+                System.out.println("Snackbar Set Action - OnClick.")
+            })
+            snack.show()
             // Navigate back
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         } else {

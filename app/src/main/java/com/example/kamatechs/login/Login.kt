@@ -53,7 +53,7 @@ class Login : Fragment() {
                     })
                 snack.show()
             }
- //           else Snackbar.make(requireView(), "Wrong Username or Password", Snackbar.LENGTH_SHORT).show()
+//            else Snackbar.make(requireView(), "Wrong Username or Password", Snackbar.LENGTH_SHORT).show()
         })
 
         binding.loginViewModel = loginViewModel
@@ -68,4 +68,3 @@ class Login : Fragment() {
     }
 
 }
-
