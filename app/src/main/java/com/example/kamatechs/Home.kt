@@ -29,6 +29,8 @@ class Home : Fragment() {
             view.findNavController().navigate(R.id.action_home2_to_weather)
         }
 
+        setHasOptionsMenu(true)
+
         binding.bottomNavigation.setSelectedItemId(R.id.home2)
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -48,7 +50,6 @@ class Home : Fragment() {
             }
         }
 
-        setHasOptionsMenu(true)
         return binding.root
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

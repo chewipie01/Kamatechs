@@ -69,7 +69,12 @@ class ListFragment : Fragment() {
         builder.setPositiveButton("Yes") { _, _ ->     // Make a "Yes" option and set action if the user selects "Yes"
             mUserViewModel.deleteAllStorages()    // Execute : delete all users
             // Notification if a user is deleted successfully
-            Snackbar.make(requireView(), "Successfully Removed Everything", Snackbar.LENGTH_LONG).show()
+            val snack = Snackbar.make(requireView(), "Successfully Removed Everything!", Snackbar.LENGTH_SHORT)
+            snack.setAction("DISMISS", View.OnClickListener {
+                // executed when DISMISS is clicked
+                System.out.println("Snackbar Set Action - OnClick.")
+            })
+            snack.show()
             // Note: No need to navigate app user to List Fragment since deleting all users takes place at List Fragment.
         }
         builder.setNegativeButton("No") { _, _ -> }    // Make a "No" option and set action if the user selects "No"

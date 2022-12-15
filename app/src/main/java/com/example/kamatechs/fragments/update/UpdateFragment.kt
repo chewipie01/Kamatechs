@@ -60,8 +60,12 @@ class UpdateFragment : Fragment() {
 
             // Update Current User
             mUserViewModel.updateStorage(updatedStorage)
-            Snackbar.make(requireView(), "Updated Successfully!", Snackbar.LENGTH_SHORT).show()
-
+            val snack = Snackbar.make(requireView(), "Updated Successfully!", Snackbar.LENGTH_SHORT)
+            snack.setAction("DISMISS", View.OnClickListener {
+                // executed when DISMISS is clicked
+                System.out.println("Snackbar Set Action - OnClick.")
+            })
+            snack.show()
             // Navigate back to List Fragment
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         } else {
