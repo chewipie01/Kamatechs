@@ -32,11 +32,6 @@
         android:id="@+id/privatePolicy"
         android:icon="@android:drawable/ic_dialog_alert"
         android:title="Privacy Policy" />
-    <item
-        android:id="@+id/login"
-        android:title="Logout"
-        android:icon="@drawable/ic_logout"
-        />
 
 
 </menu>
